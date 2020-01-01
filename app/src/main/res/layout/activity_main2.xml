@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    tools:context=".Main2Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:id="@+id/toolbar"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="#000"
+                    android:id="@+id/savebtn"
+                    android:drawableRight="@drawable/ic_check_black_24dp"
+                    />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:hint="Title"
+            android:textSize="30dp"
+            android:textColor="#fff"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="10dp"
+            android:textColorHint="#888"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#fff"
+            android:id="@+id/notes"
+            android:layout_below="@id/title"
+            android:gravity="start"
+            android:textSize="20sp"
+            android:hint="Enter Notes"
+            android:textColorHint="#888"
+            android:layout_margin="10dp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
