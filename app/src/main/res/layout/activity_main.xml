@@ -9,32 +9,54 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:theme="@style/AppTheme.NoActionBar"
-        >
-
+        android:theme="@style/AppTheme.NoActionBar">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_gravity="center"
             android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            android:gravity="center"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="center"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="#fcd303"
+                android:clickable="true"
+                app:srcCompat="@drawable/logout" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Notes"
+                android:layout_marginLeft="80dp"
                 android:gravity="center"
+                android:text="Notes"
                 android:textColor="#fff"
-                android:textSize="30dp"
-                />
+                android:textSize="30dp" />
+
+            <ImageButton
+                android:id="@+id/searchbutn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:background="#000"
+                android:src="@drawable/ic_search_black_24dp" />
+
         </androidx.appcompat.widget.Toolbar>
 
+
     </com.google.android.material.appbar.AppBarLayout>
+
+
+
 
     <include layout="@layout/content_main" />
 
@@ -46,5 +68,8 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
